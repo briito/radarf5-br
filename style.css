@@ -306,3 +306,37 @@ body.legal-body {
     margin-top: 26px;
   }
 }
+
+/* ==========================================================
+   RADAR F5 SHOP (/achadinhos) — cards de grupos e aviso de afiliado
+   ========================================================== */
+
+.link-card .link-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin: 0 0.9rem;
+  text-align: left;
+}
+
+.link-card .link-text small {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 400;
+}
+
+.link-card:focus-visible {
+  outline: 2px solid var(--neon-yellow);
+  outline-offset: 2px;
+}
+
+.affiliate-note {
+  margin-top: 1.5rem;
+  max-width: 34ch;
+  color: #e2e8f0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  text-align: center;
+  opacity: 0.85;
+}
