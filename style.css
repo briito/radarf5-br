@@ -16,19 +16,25 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Body em bloco (não flex): navegadores embutidos como o do Instagram injetam
+   elementos no <body>, e em flex eles viravam "colunas" e espremiam a página. */
 body {
   background-color: var(--bg-main);
   color: var(--text-primary);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   min-height: 100vh;
-  padding: 2rem 1rem;
+  padding: clamp(1rem, 6vh, 3rem) 1rem calc(2rem + env(safe-area-inset-bottom, 0px));
 }
 
 .bio-wrapper {
   width: 100%;
   max-width: 460px;
+  margin: 0 auto;
   background: var(--purple-gradient);
   padding: 2.5rem 1.5rem;
   border-radius: 28px;
@@ -173,9 +179,7 @@ body.legal-body {
   padding: 24px 16px;
   background: var(--legal-bg-body);
   color: var(--legal-text-primary);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  display: block;
 }
 
 .legal-page .legal-content {
