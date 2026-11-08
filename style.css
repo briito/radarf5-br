@@ -344,3 +344,151 @@ body.legal-body {
   text-align: center;
   opacity: 0.85;
 }
+
+/* ==========================================================
+   RADAR F5 SHOP (/achadinhos) — botões expansíveis (accordion)
+   Escopo: .accordion-item / .accordion-trigger / .sub-link
+   ========================================================== */
+
+.accordion-item {
+  width: 100%;
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 1.1rem 1.25rem;
+  border-radius: 16px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.accordion-trigger:hover {
+  background-color: var(--card-hover);
+  transform: translateY(-2px);
+  border-color: var(--neon-yellow);
+}
+
+.accordion-trigger:focus-visible,
+.sub-link:focus-visible {
+  outline: 2px solid var(--neon-yellow);
+  outline-offset: 2px;
+}
+
+.accordion-trigger.highlight {
+  border-color: rgba(204, 255, 0, 0.4);
+}
+
+.accordion-trigger[aria-expanded="true"] {
+  border-color: var(--neon-yellow);
+  background-color: var(--card-hover);
+}
+
+.accordion-trigger i {
+  font-size: 1.4rem;
+  color: var(--neon-yellow);
+}
+
+.accordion-trigger .link-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin: 0 0.9rem;
+}
+
+.accordion-trigger .link-text small {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 400;
+}
+
+.accordion-chevron {
+  transition: transform 0.3s ease;
+}
+
+.accordion-trigger[aria-expanded="true"] .accordion-chevron {
+  transform: rotate(180deg);
+}
+
+/* Painel: anima a altura com grid (sem JavaScript de medição) */
+.accordion-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.accordion-panel.is-open {
+  grid-template-rows: 1fr;
+}
+
+.accordion-inner {
+  min-height: 0;
+  overflow: hidden;
+  visibility: hidden; /* fecha: tira os links do foco do teclado */
+  transition: visibility 0s linear 0.3s;
+}
+
+.accordion-panel.is-open .accordion-inner {
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 0.7rem 0 0.2rem 0.9rem;
+  padding-left: 0.8rem;
+  border-left: 2px solid rgba(204, 255, 0, 0.35);
+}
+
+.sub-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 0.8rem 1rem;
+  background-color: rgba(12, 11, 16, 0.55);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.sub-link:hover {
+  background-color: var(--card-hover);
+  border-color: var(--neon-yellow);
+}
+
+.sub-link i {
+  font-size: 1.2rem;
+  color: var(--neon-yellow);
+}
+
+.sub-link .sub-link-text {
+  flex: 1;
+  margin: 0 0.75rem;
+  text-align: left;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accordion-panel,
+  .accordion-inner,
+  .accordion-chevron,
+  .accordion-trigger {
+    transition: none;
+  }
+}
