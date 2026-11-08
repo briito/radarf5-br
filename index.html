@@ -4,60 +4,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Radar F5 | Links Oficiais</title>
+  <title>Radar F5 Shop | Achadinhos e Ofertas</title>
+  <meta name="description" content="Entre no grupo VIP gratuito de WhatsApp do Radar F5 Shop e acesse as vitrines com descontos e promoções da Shopee, Mercado Livre e TikTok Shop.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Radar F5 Shop | Achadinhos e Ofertas">
+  <meta property="og:description" content="Grupo VIP gratuito no WhatsApp e vitrines com descontos e promoções da Shopee, Mercado Livre e TikTok Shop.">
+  <meta property="og:url" content="https://radarf5.com.br/">
+  <meta property="og:image" content="https://radarf5.com.br/logo-shop.webp">
+  <link rel="canonical" href="https://radarf5.com.br/">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <!-- Ícones Phosphor Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 
 <body>
 
   <div class="bio-wrapper">
-    <!-- Cabeçalho / Perfil -->
     <header class="profile">
       <div class="brand-header">
-        <img src="rf5_logo.webp" alt="Logo Radar F5" class="brand-logo">
-        <h1>Radar F5</h1>
+        <img src="logo-shop.webp" alt="Logo Radar F5 Shop" class="brand-logo">
+        <h1>Radar F5 Shop</h1>
       </div>
-      <p class="bio">Tecnologia & Negócios Digitais</p>
+      <p class="bio">Radar de Ofertas</p>
     </header>
 
-    <!-- Lista de Links -->
     <main class="links-container">
 
-      <a href="https://radarf5-bronze.vercel.app" target="_blank" rel="noopener noreferrer" class="link-card">
-        <i class="ph ph-gift"></i>
-        <span>Material Gratuito Radar F5</span>
-        <i class="ph ph-arrow-up-right"></i>
-      </a>
+      <!-- ============ BOTÃO 1: GRUPOS VIP NO WHATSAPP ============
+           Para adicionar o 4º grupo: copie um <a class="sub-link"> abaixo e troque ícone, nome, link e data-track. -->
+      <section class="accordion-item">
+        <button type="button" class="accordion-trigger highlight" id="acc-grupos-btn" aria-expanded="false"
+          aria-controls="acc-grupos-panel" data-track="abrir_grupos_vip">
+          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
+          <span class="link-text">Grupo VIP no WhatsApp<small>(Gratuito) Receba somente ofertas do seu interesse</small></span>
+          <i class="ph ph-caret-down accordion-chevron" aria-hidden="true"></i>
+        </button>
+        <div class="accordion-panel" id="acc-grupos-panel" role="region" aria-labelledby="acc-grupos-btn">
+          <div class="accordion-inner">
+            <div class="accordion-list">
 
+              <a href="https://chat.whatsapp.com/IBd0xJejhm6Cu4XYJFIGou" target="_blank" rel="noopener noreferrer"
+                class="sub-link" data-group="casa-cozinha" data-track="grupo_casa_cozinha">
+                <i class="ph ph-cooking-pot" aria-hidden="true"></i>
+                <span class="sub-link-text">Casa e Cozinha</span>
+                <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
+              </a>
 
-      <a href="https://radarf5.com" target="_blank" rel="noopener noreferrer" class="link-card">
-        <i class="ph ph-globe"></i>
-        <span>Blog Radar F5</span>
-        <i class="ph ph-arrow-up-right"></i>
-      </a>
+              <a href="https://chat.whatsapp.com/KUv7R1PlitZ6AGfAqa71PC" target="_blank" rel="noopener noreferrer"
+                class="sub-link" data-group="tecnologia-eletronicos" data-track="grupo_tecnologia_eletronicos">
+                <i class="ph ph-laptop" aria-hidden="true"></i>
+                <span class="sub-link-text">Tecnologia e Eletrônicos</span>
+                <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
+              </a>
 
-      <a href="https://negociosdigitais.radarf5.com/" target="_blank" rel="noopener noreferrer"
-        class="link-card highlight">
-        <i class="ph ph-shopping-cart"></i>
-        <span>Produtos Radar F5</span>
-        <i class="ph ph-arrow-up-right"></i>
-      </a>
+              <a href="https://chat.whatsapp.com/D8Ig8v2XEDDFq84dXhTXj2" target="_blank" rel="noopener noreferrer"
+                class="sub-link" data-group="acessorios-celular" data-track="grupo_acessorios_celular">
+                <i class="ph ph-device-mobile" aria-hidden="true"></i>
+                <span class="sub-link-text">Acessórios para Celular</span>
+                <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
+              </a>
 
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ BOTÃO 2: ACHADINHOS EM OFERTA (VITRINES) ============
+           TROQUE cada href="#" pelo link da sua vitrine em cada plataforma. -->
+      <section class="accordion-item">
+        <button type="button" class="accordion-trigger" id="acc-vitrines-btn" aria-expanded="false"
+          aria-controls="acc-vitrines-panel" data-track="abrir_vitrines">
+          <i class="ph ph-fire" aria-hidden="true"></i>
+          <span class="link-text">Achadinhos e Ofertas<small>Vitrine de descontos e promoções</small></span>
+          <i class="ph ph-caret-down accordion-chevron" aria-hidden="true"></i>
+        </button>
+        <div class="accordion-panel" id="acc-vitrines-panel" role="region" aria-labelledby="acc-vitrines-btn">
+          <div class="accordion-inner">
+            <div class="accordion-list">
+
+              <!-- TROQUE o link da vitrine da Shopee -->
+              <a href="#" target="_blank" rel="noopener noreferrer" class="sub-link" data-track="vitrine_shopee">
+                <i class="ph ph-shopping-bag" aria-hidden="true"></i>
+                <span class="sub-link-text">Vitrine Shopee</span>
+                <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+              </a>
+
+              <!-- TROQUE o link da vitrine do Mercado Livre -->
+              <a href="#" target="_blank" rel="noopener noreferrer" class="sub-link" data-track="vitrine_mercado_livre">
+                <i class="ph ph-handshake" aria-hidden="true"></i>
+                <span class="sub-link-text">Vitrine Mercado Livre</span>
+                <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+              </a>
+
+              <!-- TROQUE o link da vitrine do TikTok Shop -->
+              <a href="#" target="_blank" rel="noopener noreferrer" class="sub-link" data-track="vitrine_tiktok_shop">
+                <i class="ph ph-tiktok-logo" aria-hidden="true"></i>
+                <span class="sub-link-text">Vitrine TikTok Shop</span>
+                <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </section>
 
     </main>
 
-    <!-- Rodapé -->
     <footer>
-      <p>© 2026 Radar F5. Todos os direitos reservados.</p>
+      <p>© 2026 Radar F5 Shop. Todos os direitos reservados.</p>
       <nav class="legal-links" aria-label="Informações legais">
-        <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a>
-        <span aria-hidden="true">•</span>
-        <a href="politica-de-cookies.html" target="_blank">Política de Cookies</a>
-        <span aria-hidden="true">•</span>
-        <a href="termos-de-uso.html" target="_blank">Termos de Uso</a>
+        <a href="politica-de-privacidade.html">Política de Privacidade</a>
+        <span aria-hidden="true"></span>
+        <a href="politica-de-cookies.html">Política de Cookies</a>
+        <span aria-hidden="true"></span>
+        <a href="termos-de-uso.html">Termos de Uso</a>
+        <span aria-hidden="true"></span>
+        <a href="termos-de-uso.html#afiliados">Divulgação de afiliados</a>
       </nav>
     </footer>
   </div>

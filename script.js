@@ -8,7 +8,7 @@ document.querySelectorAll('.link-card').forEach(card => {
 });
 
 /* ==========================================================
-   /achadinhos — accordion (um painel aberto por vez) + rastreamento
+   Radar F5 Shop — accordion (um painel aberto por vez) + rastreamento
    Sem efeito em páginas sem .accordion-trigger.
    ========================================================== */
 (function () {
